@@ -1,0 +1,75 @@
+/* removes some useless shit from discor */
+button:has(div > div > svg > path[d="M16.886 7.999H20C21.104 7.999 22 8.896 22 9.999V11.999H2V9.999C2 8.896 2.897 7.999 4 7.999H7.114C6.663 7.764 6.236 7.477 5.879 7.121C4.709 5.951 4.709 4.048 5.879 2.879C7.012 1.746 8.986 1.746 10.121 2.877C11.758 4.514 11.979 7.595 11.998 7.941C11.9991 7.9525 11.9966 7.96279 11.9941 7.97304C11.992 7.98151 11.99 7.98995 11.99 7.999H12.01C12.01 7.98986 12.0079 7.98134 12.0058 7.97287C12.0034 7.96282 12.0009 7.95286 12.002 7.942C12.022 7.596 12.242 4.515 13.879 2.878C15.014 1.745 16.986 1.746 18.121 2.877C19.29 4.049 19.29 5.952 18.121 7.121C17.764 7.477 17.337 7.764 16.886 7.999ZM7.293 5.707C6.903 5.316 6.903 4.682 7.293 4.292C7.481 4.103 7.732 4 8 4C8.268 4 8.519 4.103 8.707 4.292C9.297 4.882 9.641 5.94 9.825 6.822C8.945 6.639 7.879 6.293 7.293 5.707ZM14.174 6.824C14.359 5.941 14.702 4.883 15.293 4.293C15.481 4.103 15.732 4 16 4C16.268 4 16.519 4.103 16.706 4.291C17.096 4.682 17.097 5.316 16.707 5.707C16.116 6.298 15.057 6.642 14.174 6.824ZM3 13.999V19.999C3 21.102 3.897 21.999 5 21.999H11V13.999H3ZM13 13.999V21.999H19C20.104 21.999 21 21.102 21 19.999V13.999H13Z"]) { /* greedy fuck */
+  display: none
+} /* no gift button */
+
+div.toolbar-3_r2xA > div:has(div > svg > g > path[d="M17.5053 1.76605C17.5053 1.76605 26.7154 8.05195 23.2155 16.8783C19.7157 25.7047 12.7544 23.2563 15.3562 20.6775C17.9581 18.0986 12.2862 16.3487 8.65588 13.0024L17.4976 1.76605"]) { /* i am sane */
+  display: none;
+} /* no help button on top */
+
+div.container-2giAcK:has(div.progressBarContainer-1efroK) {
+  display: none; 
+} /* no boost status */
+
+
+div[class="iconItem-1EjiK0 iconBase-2G48Fc"]:has(svg > path[d="M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"]), div[class="iconItem-1EjiK0 iconBase-2G48Fc"]:has(svg > path[d="M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"]) > svg {
+  width: 0;
+  margin:0;
+  padding: 0;
+  display: none;
+} /* no create invite button on channels*/
+
+
+div[class="item-5ApiZt labelContainer-35-WEd colorDefault-2_rLdz"]:has(.iconContainer-Ksy8Oj > svg > path[d="M12 2C14.761 2 17 4.238 17 7V9H7V7C7 4.238 9.238 2 12 2ZM10.5 5.5C10.5 6.329 11.172 7 12 7C12.828 7 13.5 6.329 13.5 5.5C13.5 4.671 12.828 4 12 4C11.172 4 10.5 4.671 10.5 5.5ZM23 22H17L19 19V12H17V18C17 18.553 16.552 19 16 19H14L15 22H9L10 19H8C7.448 19 7 18.553 7 18V12H5V19L7 22H1L3 19V12C3 10.896 3.897 10 5 10H19C20.103 10 21 10.896 21 12V19L23 22ZM13 14C13 14.553 13.448 15 14 15C14.552 15 15 14.553 15 14C15 13.447 14.552 13 14 13C13.448 13 13 13.447 13 14Z"]) {
+  display: none
+} /* no app directory */
+
+.guildIconV2Container-2H8IRS, .flowerStarContainer-1QeD-L {
+  display: none;
+} /* no new guild badges */
+
+ul.content-yjf30S > div[style="height: 8px;"], ul.content-yjf30S > li[aria-posinset="1"], ul.content-yjf30S > li[aria-posinset="2"] {
+  display: none;
+} /* remove the nitro and friends buttons on main screen; removes friends title on top */
+
+main > section > div > div.iconWrapper-2awDjA, main > section > div > div.titleWrapper-24Kyzc, main > section > div > div.divider-q3P9HC {
+  display: none;
+}
+
+/* removes user statuses from pfp corners, a bit janky; best used with platformindicators plugin */
+svg[class="mask-1y0tyc svg-1G_H_8"] > foreignObject {
+  mask: url(#svg-mask-status-online);
+}
+
+svg[class="mask-1y0tyc svg-1G_H_8"] > rect {
+  mask: none;
+  display: none;
+}
+
+/* disable add super reaction button and the section in reactions */
+div.button-3bklZh:has(svg > path[d="M20.3397 14.2379C21.2318 14.4731 22.1292 14.5474 23 14.4789C22.9906 14.5151 22.9809 14.5514 22.9711 14.5876C21.5194 19.9201 15.9496 23.086 10.5309 21.6569C10.3451 21.6079 10.1619 21.5542 9.98145 21.4958C7.94618 20.8378 5.90941 20 3.77041 20H3.5C2.67157 20 2 19.3284 2 18.5C2 17.6716 2.67157 17 3.5 17C4.75918 17 3.9661 15.8584 3.47514 14.7655C3.28101 14.3334 2.86615 14 2.39244 14H1.5C0.671573 14 0 13.3284 0 12.5C0 11.6716 0.671573 11 1.5 11V11C2.38174 11 3.10559 10.3274 3.33171 9.47516C3.33726 9.45427 3.34287 9.43338 3.34856 9.41249V9.41249C3.53406 8.7311 2.9812 8.0187 2.44976 7.55366C2.17543 7.31362 2 6.96872 2 6.5C2 5.67157 2.67157 5 3.5 5V5C5.03983 5 6.4765 4.31861 7.78941 3.51404C10.0926 2.10261 12.9612 1.59744 15.7887 2.34316C15.827 2.35324 15.8651 2.36352 15.9031 2.374C15.4064 3.08271 15.0224 3.88574 14.7831 4.76493C13.6598 8.89108 16.1476 13.1323 20.3397 14.2379ZM9.26206 8.71607C8.70747 8.56981 8.13976 8.79579 7.83448 9.23964C7.62045 9.55083 7.19184 9.86027 6.69655 9.72964C6.24033 9.60932 5.88292 9.10507 6.13732 8.60064C6.78216 7.32202 8.27206 6.62396 9.72714 7.00771C11.1822 7.39146 12.1179 8.72923 12.0268 10.1539C11.9909 10.7159 11.4252 10.9767 10.969 10.8564C10.4737 10.7258 10.2597 10.2469 10.2324 9.87205C10.1935 9.33743 9.81666 8.86234 9.26206 8.71607ZM16.3671 14.9268C16.17 14.5422 15.7892 14.2404 15.3308 14.1195L10.6411 12.8827C10.1826 12.7618 9.69947 12.8357 9.33352 13.0718C8.95878 13.3135 8.70829 13.7284 8.7613 14.2422C8.93054 15.8827 10.1055 17.3278 11.821 17.7802C13.5365 18.2326 15.2881 17.5594 16.2681 16.222C16.575 15.8031 16.5688 15.3205 16.3671 14.9268Z"]), #message-actions-add-reaction-1 {
+  display: none;
+}
+
+section.contentWrapper-2f9yME:has(nav.nav-1cHpYc > div.navList-3uG4ub) {
+  padding: 0;
+  margin: 0;
+}
+nav.nav-1cHpYc:has(div.navList-3uG4ub) {
+  padding: 0;
+  margin: 0;
+  width: 0;
+  height: 0;
+
+}
+div.navList-3uG4ub {
+  display: none;
+}
+
+#user-context-note {
+  display: none;
+} /* no add note on user actions */
+
+#user-context-add-friend-nickname {
+  display: none;
+} /* no add friend nickname on user actions */
