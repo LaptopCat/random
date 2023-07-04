@@ -24,9 +24,9 @@ div[class="item-5ApiZt labelContainer-35-WEd colorDefault-2_rLdz"]:has(.iconCont
   display: none
 } /* no app directory */
 
-.guildIconV2Container-2H8IRS, .flowerStarContainer-1QeD-L {
+.flowerStarContainer-1QeD-L:not(.guildIconV2Container-2H8IRS .flowerStarContainer-1QeD-L) {
   display: none;
-} /* no new guild badges */
+} /* no new guild badges in server info popup */
 
 ul.content-yjf30S > div[style="height: 8px;"], ul.content-yjf30S > li[aria-posinset="1"], ul.content-yjf30S > li[aria-posinset="2"] {
   display: none;
