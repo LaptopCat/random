@@ -1,2 +1,2 @@
 # random
-basically a file dumpster for me
+basically a random code snippet / file dumpster for me
