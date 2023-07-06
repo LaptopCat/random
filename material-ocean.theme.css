@@ -45,34 +45,35 @@
   --background-tertiary: var(--secondary);
 }
 
-div.container-1QtPKm {
-  background-color: var(--accent) !important;
-}
-
-div[class="container-1QtPKm"] {
+div[class*="control-"] > div[class*="container-"] {
   background-color: var(--primary-500) !important;
 }
 
-svg.slider-HJFN2i > svg > path {
-  fill: var(--accent) !important;
-}
-
-svg.circleIcon-3489FI > path {
-  fill: var(--accent) !important;
-}
-
-.selected-2r1Hvo {
+div[class*="control-"] > div[class*="container-"]:has(input[checked]) {
   background-color: var(--accent) !important;
 }
 
-.selected-2r1Hvo > svg.circleIcon-3489FI > path {
+
+svg[class*="slider"] > svg > path {
+  fill: var(--accent) !important;
+}
+
+[class*="circleIconButton-"] > [class*="circleIcon-"] > path {
+  fill: var(--accent) !important;
+}
+
+[class*="selected-"][class*="circleIconButton-"] {
+  background-color: var(--accent) !important;
+}
+
+[class*="selected-"][class*="circleIconButton-"] > [class*="circleIcon-"] > path {
   fill: var(--primary) !important;
 }
 
-div.expandedFolderIconWrapper-3RwQpD > svg {
+div[class*="expandedFolderIconWrapper-"] > svg {
   color: var(--accent) !important;
 }
 
-div.closedFolderIconWrapper-3tRb2d {
+div[class*="closedFolderIconWrapper-"] {
   background-color: var(--accent) !important;
 }
