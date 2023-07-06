@@ -3,16 +3,16 @@ button:has(div > div > svg > path[d="M16.886 7.999H20C21.104 7.999 22 8.896 22 9
   display: none
 } /* no gift button */
 
-div.toolbar-3_r2xA > div:has(div > svg > g > path[d="M17.5053 1.76605C17.5053 1.76605 26.7154 8.05195 23.2155 16.8783C19.7157 25.7047 12.7544 23.2563 15.3562 20.6775C17.9581 18.0986 12.2862 16.3487 8.65588 13.0024L17.4976 1.76605"]) { /* i am sane */
+div[class*="toolbar-"] > div:has(div > svg > g > path[d="M17.5053 1.76605C17.5053 1.76605 26.7154 8.05195 23.2155 16.8783C19.7157 25.7047 12.7544 23.2563 15.3562 20.6775C17.9581 18.0986 12.2862 16.3487 8.65588 13.0024L17.4976 1.76605"]) { /* i am sane */
   display: none;
 } /* no help button on top */
 
-div.container-2giAcK:has(div.progressBarContainer-1efroK) {
-  display: none; 
+ul[class*="content-"] > div[class*="container-"]:has(div[class*="progressBarContainer"]) {
+  display: none;
 } /* no boost status */
 
 
-div[class="iconItem-1EjiK0 iconBase-2G48Fc"]:has(svg > path[d="M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"]), div[class="iconItem-1EjiK0 iconBase-2G48Fc"]:has(svg > path[d="M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"]) > svg {
+div[class*="iconItem-"]:has(svg > path[d="M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"]), div[class="iconItem-1EjiK0 iconBase-2G48Fc"]:has(svg > path[d="M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"]) > svg {
   width: 0;
   margin:0;
   padding: 0;
@@ -20,49 +20,40 @@ div[class="iconItem-1EjiK0 iconBase-2G48Fc"]:has(svg > path[d="M14 2H16V3H14V5H1
 } /* no create invite button on channels*/
 
 
-div[class="item-5ApiZt labelContainer-35-WEd colorDefault-2_rLdz"]:has(.iconContainer-Ksy8Oj > svg > path[d="M12 2C14.761 2 17 4.238 17 7V9H7V7C7 4.238 9.238 2 12 2ZM10.5 5.5C10.5 6.329 11.172 7 12 7C12.828 7 13.5 6.329 13.5 5.5C13.5 4.671 12.828 4 12 4C11.172 4 10.5 4.671 10.5 5.5ZM23 22H17L19 19V12H17V18C17 18.553 16.552 19 16 19H14L15 22H9L10 19H8C7.448 19 7 18.553 7 18V12H5V19L7 22H1L3 19V12C3 10.896 3.897 10 5 10H19C20.103 10 21 10.896 21 12V19L23 22ZM13 14C13 14.553 13.448 15 14 15C14.552 15 15 14.553 15 14C15 13.447 14.552 13 14 13C13.448 13 13 13.447 13 14Z"]) {
+div[class*="item"]:has([class*="iconContainer-"] > svg > path[d="M12 2C14.761 2 17 4.238 17 7V9H7V7C7 4.238 9.238 2 12 2ZM10.5 5.5C10.5 6.329 11.172 7 12 7C12.828 7 13.5 6.329 13.5 5.5C13.5 4.671 12.828 4 12 4C11.172 4 10.5 4.671 10.5 5.5ZM23 22H17L19 19V12H17V18C17 18.553 16.552 19 16 19H14L15 22H9L10 19H8C7.448 19 7 18.553 7 18V12H5V19L7 22H1L3 19V12C3 10.896 3.897 10 5 10H19C20.103 10 21 10.896 21 12V19L23 22ZM13 14C13 14.553 13.448 15 14 15C14.552 15 15 14.553 15 14C15 13.447 14.552 13 14 13C13.448 13 13 13.447 13 14Z"]) {
   display: none
 } /* no app directory */
 
-.flowerStarContainer-1QeD-L:not(.guildIconV2Container-2H8IRS .flowerStarContainer-1QeD-L) {
+[class*="flowerStarContainer-"]:not([class*="guildIconV2Container-"] [class*="flowerStarContainer-"]) {
   display: none;
 } /* no new guild badges in server info popup */
 
-ul.content-yjf30S > div[style="height: 8px;"], ul.content-yjf30S > li[aria-posinset="1"], ul.content-yjf30S > li[aria-posinset="2"] {
+ul[class*="content-"] > div[style="height: 8px;"], ul[class*="content-"] > li[aria-posinset="1"], ul[class*="content-"] > li[aria-posinset="2"] {
   display: none;
 } /* remove the nitro and friends buttons on main screen; removes friends title on top */
 
-main > section > div > div.iconWrapper-2awDjA, main > section > div > div.titleWrapper-24Kyzc, main > section > div > div.divider-q3P9HC {
+main > section > div > div[class*="iconWrapper-"], main > section > div > div[class*="titleWrapper"], main > section > div > div[class*="divider"] {
   display: none;
 }
 
-/* removes user statuses from pfp corners, a bit janky; best used with platformindicators plugin */
-svg[class="mask-1y0tyc svg-1G_H_8"] > foreignObject {
-  mask: url(#svg-mask-status-online);
-}
-
-svg[class="mask-1y0tyc svg-1G_H_8"] > rect {
-  mask: none;
-  display: none;
-}
 
 /* disable add super reaction button and the section in reactions */
-div.button-3bklZh:has(svg > path[d="M20.3397 14.2379C21.2318 14.4731 22.1292 14.5474 23 14.4789C22.9906 14.5151 22.9809 14.5514 22.9711 14.5876C21.5194 19.9201 15.9496 23.086 10.5309 21.6569C10.3451 21.6079 10.1619 21.5542 9.98145 21.4958C7.94618 20.8378 5.90941 20 3.77041 20H3.5C2.67157 20 2 19.3284 2 18.5C2 17.6716 2.67157 17 3.5 17C4.75918 17 3.9661 15.8584 3.47514 14.7655C3.28101 14.3334 2.86615 14 2.39244 14H1.5C0.671573 14 0 13.3284 0 12.5C0 11.6716 0.671573 11 1.5 11V11C2.38174 11 3.10559 10.3274 3.33171 9.47516C3.33726 9.45427 3.34287 9.43338 3.34856 9.41249V9.41249C3.53406 8.7311 2.9812 8.0187 2.44976 7.55366C2.17543 7.31362 2 6.96872 2 6.5C2 5.67157 2.67157 5 3.5 5V5C5.03983 5 6.4765 4.31861 7.78941 3.51404C10.0926 2.10261 12.9612 1.59744 15.7887 2.34316C15.827 2.35324 15.8651 2.36352 15.9031 2.374C15.4064 3.08271 15.0224 3.88574 14.7831 4.76493C13.6598 8.89108 16.1476 13.1323 20.3397 14.2379ZM9.26206 8.71607C8.70747 8.56981 8.13976 8.79579 7.83448 9.23964C7.62045 9.55083 7.19184 9.86027 6.69655 9.72964C6.24033 9.60932 5.88292 9.10507 6.13732 8.60064C6.78216 7.32202 8.27206 6.62396 9.72714 7.00771C11.1822 7.39146 12.1179 8.72923 12.0268 10.1539C11.9909 10.7159 11.4252 10.9767 10.969 10.8564C10.4737 10.7258 10.2597 10.2469 10.2324 9.87205C10.1935 9.33743 9.81666 8.86234 9.26206 8.71607ZM16.3671 14.9268C16.17 14.5422 15.7892 14.2404 15.3308 14.1195L10.6411 12.8827C10.1826 12.7618 9.69947 12.8357 9.33352 13.0718C8.95878 13.3135 8.70829 13.7284 8.7613 14.2422C8.93054 15.8827 10.1055 17.3278 11.821 17.7802C13.5365 18.2326 15.2881 17.5594 16.2681 16.222C16.575 15.8031 16.5688 15.3205 16.3671 14.9268Z"]), #message-actions-add-reaction-1 {
+div[class*="wrapper-"] > div[class*="button-"]:has(svg > path[d="M20.3397 14.2379C21.2318 14.4731 22.1292 14.5474 23 14.4789C22.9906 14.5151 22.9809 14.5514 22.9711 14.5876C21.5194 19.9201 15.9496 23.086 10.5309 21.6569C10.3451 21.6079 10.1619 21.5542 9.98145 21.4958C7.94618 20.8378 5.90941 20 3.77041 20H3.5C2.67157 20 2 19.3284 2 18.5C2 17.6716 2.67157 17 3.5 17C4.75918 17 3.9661 15.8584 3.47514 14.7655C3.28101 14.3334 2.86615 14 2.39244 14H1.5C0.671573 14 0 13.3284 0 12.5C0 11.6716 0.671573 11 1.5 11V11C2.38174 11 3.10559 10.3274 3.33171 9.47516C3.33726 9.45427 3.34287 9.43338 3.34856 9.41249V9.41249C3.53406 8.7311 2.9812 8.0187 2.44976 7.55366C2.17543 7.31362 2 6.96872 2 6.5C2 5.67157 2.67157 5 3.5 5V5C5.03983 5 6.4765 4.31861 7.78941 3.51404C10.0926 2.10261 12.9612 1.59744 15.7887 2.34316C15.827 2.35324 15.8651 2.36352 15.9031 2.374C15.4064 3.08271 15.0224 3.88574 14.7831 4.76493C13.6598 8.89108 16.1476 13.1323 20.3397 14.2379ZM9.26206 8.71607C8.70747 8.56981 8.13976 8.79579 7.83448 9.23964C7.62045 9.55083 7.19184 9.86027 6.69655 9.72964C6.24033 9.60932 5.88292 9.10507 6.13732 8.60064C6.78216 7.32202 8.27206 6.62396 9.72714 7.00771C11.1822 7.39146 12.1179 8.72923 12.0268 10.1539C11.9909 10.7159 11.4252 10.9767 10.969 10.8564C10.4737 10.7258 10.2597 10.2469 10.2324 9.87205C10.1935 9.33743 9.81666 8.86234 9.26206 8.71607ZM16.3671 14.9268C16.17 14.5422 15.7892 14.2404 15.3308 14.1195L10.6411 12.8827C10.1826 12.7618 9.69947 12.8357 9.33352 13.0718C8.95878 13.3135 8.70829 13.7284 8.7613 14.2422C8.93054 15.8827 10.1055 17.3278 11.821 17.7802C13.5365 18.2326 15.2881 17.5594 16.2681 16.222C16.575 15.8031 16.5688 15.3205 16.3671 14.9268Z"]), #message-actions-add-reaction-1 {
   display: none;
 }
 
-section.contentWrapper-2f9yME:has(nav.nav-1cHpYc > div.navList-3uG4ub) {
+section[class*="contentWrapper-"]:has(nav[class*="nav-"] > div[class*="navList-"]) {
   padding: 0;
   margin: 0;
 }
-nav.nav-1cHpYc:has(div.navList-3uG4ub) {
+nav[class*="nav-"]:has(div[class*="navList-"]) {
   padding: 0;
   margin: 0;
   width: 0;
   height: 0;
 
 }
-div.navList-3uG4ub {
+div[class*="navList-"] {
   display: none;
 }
 
@@ -78,7 +69,7 @@ div[data-testid="v2-marketing-page-hero-header"] {
   display: none;
 }
 
-div[class="perksContainer-1hGJpM perkCardsContainerSpacingSettings-2mxjuX perkCardsContainer-5BHrbf"] {
+div[class*="perksContainer-"] {
   display: none;
 }
 
@@ -86,53 +77,53 @@ div[data-testid="v2-marketing-page-footer"] {
   display: none;
 }
 
-div[class="imageWrapper-oMkQl4 bottomIllustration-GuKjww desaturate-_Twf3u"] > img {
+div[class*="bottomIllustration"] > img {
   content: url("https://cdn.discordapp.com/emojis/1010361146156531752.gif?quality=lossless");
 } /* removes some nitro ads and replaces the fucker on  the bottom of nitro page */
 
-div.premiumLabel-3HPvdB > svg:has(path[d="M1.47241 3.74953C1.75665 3.74953 1.99347 3.51738 1.99347 3.23876C1.99347 2.96014 1.75665 2.72799 1.47241 2.72799H1.18817C0.903933 2.72799 0.666992 2.96014 0.666992 3.23876C0.666992 3.51738 0.903933 3.74953 1.18817 3.74953H1.47241ZM12.226 9.92569C14.9262 8.71836 16.0632 5.65352 14.8315 3.09945C13.9788 1.2884 12.1787 0.22039 10.2837 0.127441H4.93063C4.45686 0.127441 4.12521 0.499012 4.12521 0.916945C4.12521 1.38124 4.50427 1.70634 4.93063 1.70634H6.3044C6.58864 1.70634 6.82547 1.93848 6.82547 2.21711C6.82547 2.49573 6.58864 2.72799 6.3044 2.72799H2.94096C2.65672 2.72799 2.41978 2.96014 2.41978 3.23876C2.41978 3.51738 2.65672 3.74953 2.94096 3.74953H5.35698C5.64122 3.74953 5.87805 3.98179 5.87805 4.26041C5.87805 4.53903 5.64122 4.77118 5.35698 4.77118H3.84097C3.55674 4.77118 3.31991 5.00333 3.31991 5.28195C3.31991 5.56057 3.55674 5.79283 3.84097 5.79283H4.88322C4.93063 6.35008 5.07275 6.90732 5.30957 7.41809C6.49393 9.97216 9.62055 11.0866 12.226 9.92569ZM7.37766 6.46674C6.68981 4.9984 7.34662 3.26147 8.84456 2.58721C10.3425 1.91294 12.1144 2.55678 12.8023 4.02512C13.4901 5.49346 12.8334 7.23039 11.3354 7.90465C9.83746 8.57892 8.06552 7.93508 7.37766 6.46674Z"]) {
+div[class*="premiumLabel-"] > svg:has(path[d="M1.47241 3.74953C1.75665 3.74953 1.99347 3.51738 1.99347 3.23876C1.99347 2.96014 1.75665 2.72799 1.47241 2.72799H1.18817C0.903933 2.72799 0.666992 2.96014 0.666992 3.23876C0.666992 3.51738 0.903933 3.74953 1.18817 3.74953H1.47241ZM12.226 9.92569C14.9262 8.71836 16.0632 5.65352 14.8315 3.09945C13.9788 1.2884 12.1787 0.22039 10.2837 0.127441H4.93063C4.45686 0.127441 4.12521 0.499012 4.12521 0.916945C4.12521 1.38124 4.50427 1.70634 4.93063 1.70634H6.3044C6.58864 1.70634 6.82547 1.93848 6.82547 2.21711C6.82547 2.49573 6.58864 2.72799 6.3044 2.72799H2.94096C2.65672 2.72799 2.41978 2.96014 2.41978 3.23876C2.41978 3.51738 2.65672 3.74953 2.94096 3.74953H5.35698C5.64122 3.74953 5.87805 3.98179 5.87805 4.26041C5.87805 4.53903 5.64122 4.77118 5.35698 4.77118H3.84097C3.55674 4.77118 3.31991 5.00333 3.31991 5.28195C3.31991 5.56057 3.55674 5.79283 3.84097 5.79283H4.88322C4.93063 6.35008 5.07275 6.90732 5.30957 7.41809C6.49393 9.97216 9.62055 11.0866 12.226 9.92569ZM7.37766 6.46674C6.68981 4.9984 7.34662 3.26147 8.84456 2.58721C10.3425 1.91294 12.1144 2.55678 12.8023 4.02512C13.4901 5.49346 12.8334 7.23039 11.3354 7.90465C9.83746 8.57892 8.06552 7.93508 7.37766 6.46674Z"]) {
   display: none;
 } /* removes the nitro icon near the nitro section in settings */
 
-div[class="outer-VAWfYQ video-293uMj videoWrapper-1_H3B3"]:has(iframe[src="https://www.youtube.com/embed/SWzB1mx2o5k?rel=0&showinfo=0&controls=1&origin=https://discord.com"]) {
+div[class*="videoWrapper-"]:has(iframe[src="https://www.youtube.com/embed/SWzB1mx2o5k?rel=0&showinfo=0&controls=1&origin=https://discord.com"]) {
   display: none;
 } /* removes youtube video from hypesquad page */
 
-div.socialLinks-3ywLUf {
+div[class*="socialLinks-"] {
   display: none;
 }
 
-button[class*="shinyButton-2Q9MDB premiumButton-3IMLLV"] {
+button[class*="shinyButton-"][class*="premiumButton-"] {
   display: none;
 }
 
 
-div[class="tier0-17mYUd card-3ie2dy"] {
+div[class*="tier0-"][class*="card-"] {
   height: 330px;
 }
 
-div[class="tier0-17mYUd card-3ie2dy"] > button[class="shinyButton-2Q9MDB button-ejjZWC lookInverted-2GrLaB colorBrand-2M3O3N sizeMedium-2oH5mg grow-2T4nbg marginTopForButtons-3u_La7"] {
+div[class*="tier0-"][class*="card-"] > button[class*="shinyButton-"] {
   bottom: 50px;
 }
 
-div[class="tier2-qNjKTW card-3ie2dy"] {
+div[class*="tier2-"][class*="card-"] {
   height: 360px;
 }
 
-div[class="tier2-qNjKTW card-3ie2dy"] > button[class="shinyButton-2Q9MDB button-ejjZWC lookInverted-2GrLaB colorBrand-2M3O3N sizeMedium-2oH5mg grow-2T4nbg marginTopForButtons-3u_La7"] {
+div[class*="tier2-"][class*="card-"] > button[class*="shinyButton-"] {
   bottom: 50px;
 }
 
-div[class="premiumTierCardsContainerSettings-3_Raf8 premiumTierCardsContainer-2obTQK"] {
+div[class*="premiumTierCardsContainerSettings-"] {
   margin-bottom: 20px;
 }
 
 
 
-div.listItem-3SmSlK:has(div > div > svg > foreignObject > div > svg > path[d="M12 10.9C11.39 10.9 10.9 11.39 10.9 12C10.9 12.61 11.39 13.1 12 13.1C12.61 13.1 13.1 12.61 13.1 12C13.1 11.39 12.61 10.9 12 10.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.19 14.19L6 18L9.81 9.81L18 6L14.19 14.19Z"]) {
+div[class*="listItem-"]:has(div > div > svg > foreignObject > div > svg > path[d="M12 10.9C11.39 10.9 10.9 11.39 10.9 12C10.9 12.61 11.39 13.1 12 13.1C12.61 13.1 13.1 12.61 13.1 12C13.1 11.39 12.61 10.9 12 10.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.19 14.19L6 18L9.81 9.81L18 6L14.19 14.19Z"]) {
   display: none;
 }
 
-div.emojiSection-3QtaWO > button {
+div[class*="emojiSection-"] > button {
   display: none;
 }
