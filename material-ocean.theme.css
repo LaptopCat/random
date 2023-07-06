@@ -1,0 +1,78 @@
+/* recreation of material ocean theme for discord */
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url("https://amongusroleplay.cf/font.ttf/") /* not sussy */
+}
+
+
+:root {
+  --accent: #ff4151;
+  --primary: #0f111a;
+  --secondary: #00010A;
+  --brand-100: var(--accent);
+  --brand-130: var(--accent);
+  --brand-160: var(--accent);
+  --brand-200: var(--accent);
+  --brand-230: var(--accent);
+  --brand-260: var(--accent);
+  --brand-300: var(--accent);
+  --brand-330: var(--accent);
+  --brand-360: var(--accent);
+  --brand-400: var(--accent);
+  --brand-430: var(--accent);
+  --brand-460: var(--accent);
+  --brand-500: var(--accent);
+  --brand-530: var(--accent);
+  --brand-560: var(--accent);
+  --brand-600: var(--accent);
+  --brand-630: var(--accent);
+  --brand-660: var(--accent);
+  --brand-700: var(--accent);
+  --brand-730: var(--accent);
+  --brand-760: var(--accent);
+  --brand-800: var(--accent);
+  --brand-830: var(--accent);
+  --brand-860: var(--accent);
+  --brand-900: var(--accent);
+  --text-link: var(--accent);
+  --mention-background: #5A363D;
+  --background-secondary: var(--secondary);
+  --background-primary: var(--primary);
+  --font-primary: "Google Sans";
+  --font-display: "Google Sans";
+  --font-headline: "Google Sans";
+  --background-tertiary: var(--secondary);
+}
+
+div.container-1QtPKm {
+  background-color: var(--accent) !important;
+}
+
+div[class="container-1QtPKm"] {
+  background-color: var(--primary-500) !important;
+}
+
+svg.slider-HJFN2i > svg > path {
+  fill: var(--accent) !important;
+}
+
+svg.circleIcon-3489FI > path {
+  fill: var(--accent) !important;
+}
+
+.selected-2r1Hvo {
+  background-color: var(--accent) !important;
+}
+
+.selected-2r1Hvo > svg.circleIcon-3489FI > path {
+  fill: var(--primary) !important;
+}
+
+div.expandedFolderIconWrapper-3RwQpD > svg {
+  color: var(--accent) !important;
+}
+
+div.closedFolderIconWrapper-3tRb2d {
+  background-color: var(--accent) !important;
+}
