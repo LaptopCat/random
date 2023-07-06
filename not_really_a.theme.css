@@ -1,4 +1,3 @@
-
 /* removes some useless shit from discor */
 button:has(div > div > svg > path[d="M16.886 7.999H20C21.104 7.999 22 8.896 22 9.999V11.999H2V9.999C2 8.896 2.897 7.999 4 7.999H7.114C6.663 7.764 6.236 7.477 5.879 7.121C4.709 5.951 4.709 4.048 5.879 2.879C7.012 1.746 8.986 1.746 10.121 2.877C11.758 4.514 11.979 7.595 11.998 7.941C11.9991 7.9525 11.9966 7.96279 11.9941 7.97304C11.992 7.98151 11.99 7.98995 11.99 7.999H12.01C12.01 7.98986 12.0079 7.98134 12.0058 7.97287C12.0034 7.96282 12.0009 7.95286 12.002 7.942C12.022 7.596 12.242 4.515 13.879 2.878C15.014 1.745 16.986 1.746 18.121 2.877C19.29 4.049 19.29 5.952 18.121 7.121C17.764 7.477 17.337 7.764 16.886 7.999ZM7.293 5.707C6.903 5.316 6.903 4.682 7.293 4.292C7.481 4.103 7.732 4 8 4C8.268 4 8.519 4.103 8.707 4.292C9.297 4.882 9.641 5.94 9.825 6.822C8.945 6.639 7.879 6.293 7.293 5.707ZM14.174 6.824C14.359 5.941 14.702 4.883 15.293 4.293C15.481 4.103 15.732 4 16 4C16.268 4 16.519 4.103 16.706 4.291C17.096 4.682 17.097 5.316 16.707 5.707C16.116 6.298 15.057 6.642 14.174 6.824ZM3 13.999V19.999C3 21.102 3.897 21.999 5 21.999H11V13.999H3ZM13 13.999V21.999H19C20.104 21.999 21 21.102 21 19.999V13.999H13Z"]) { /* greedy fuck */
   display: none
@@ -100,5 +99,40 @@ div[class="outer-VAWfYQ video-293uMj videoWrapper-1_H3B3"]:has(iframe[src="https
 } /* removes youtube video from hypesquad page */
 
 div.socialLinks-3ywLUf {
+  display: none;
+}
+
+button[class*="shinyButton-2Q9MDB premiumButton-3IMLLV"] {
+  display: none;
+}
+
+
+div[class="tier0-17mYUd card-3ie2dy"] {
+  height: 330px;
+}
+
+div[class="tier0-17mYUd card-3ie2dy"] > button[class="shinyButton-2Q9MDB button-ejjZWC lookInverted-2GrLaB colorBrand-2M3O3N sizeMedium-2oH5mg grow-2T4nbg marginTopForButtons-3u_La7"] {
+  bottom: 50px;
+}
+
+div[class="tier2-qNjKTW card-3ie2dy"] {
+  height: 360px;
+}
+
+div[class="tier2-qNjKTW card-3ie2dy"] > button[class="shinyButton-2Q9MDB button-ejjZWC lookInverted-2GrLaB colorBrand-2M3O3N sizeMedium-2oH5mg grow-2T4nbg marginTopForButtons-3u_La7"] {
+  bottom: 50px;
+}
+
+div[class="premiumTierCardsContainerSettings-3_Raf8 premiumTierCardsContainer-2obTQK"] {
+  margin-bottom: 20px;
+}
+
+
+
+div.listItem-3SmSlK:has(div > div > svg > foreignObject > div > svg > path[d="M12 10.9C11.39 10.9 10.9 11.39 10.9 12C10.9 12.61 11.39 13.1 12 13.1C12.61 13.1 13.1 12.61 13.1 12C13.1 11.39 12.61 10.9 12 10.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.19 14.19L6 18L9.81 9.81L18 6L14.19 14.19Z"]) {
+  display: none;
+}
+
+div.emojiSection-3QtaWO > button {
   display: none;
 }
