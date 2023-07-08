@@ -127,3 +127,7 @@ div[class*="listItem-"]:has(div > div > svg > foreignObject > div > svg > path[d
 div[class*="emojiSection-"] > button {
   display: none;
 }
+
+div[class*="recentsIcon-"] {
+  display: none;
+}
