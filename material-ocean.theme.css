@@ -10,6 +10,7 @@
   --accent: #ff4151;
   --primary: #0f111a;
   --secondary: #00010A;
+  --radius: 1rem;
   --brand-100: var(--accent);
   --brand-130: var(--accent);
   --brand-160: var(--accent);
@@ -35,6 +36,28 @@
   --brand-830: var(--accent);
   --brand-860: var(--accent);
   --brand-900: var(--accent);
+  --green-100: var(--accent);
+  --green-130: var(--accent);
+  --green-160: var(--accent);
+  --green-200: var(--accent);
+  --green-230: var(--accent);
+  --green-260: var(--accent);
+  --green-300: var(--accent);
+  --green-400: var(--accent);
+  --green-460: var(--accent);
+  --green-500: var(--accent);
+  --green-530: var(--accent);
+  --green-560: var(--accent);
+  --green-600: var(--accent);
+  --green-630: var(--accent);
+  --green-660: var(--accent);
+  --green-700: var(--accent);
+  --green-730: var(--accent);
+  --green-760: var(--accent);
+  --green-800: var(--accent);
+  --green-830: var(--accent);
+  --green-860: var(--accent);
+  --green-900: var(--accent);
   --text-link: var(--accent);
   --mention-background: #5A363D;
   --background-secondary: var(--secondary);
@@ -43,20 +66,27 @@
   --font-display: "Google Sans";
   --font-headline: "Google Sans";
   --background-tertiary: var(--secondary);
+  --radius-xs: var(--radius);
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
+  --radius-xxl: var(--radius);
 }
 
-div[class*="control-"] > div[class*="container-"] {
+div[class*="control-"] > div[class*="container-"], div[class*="container"] > div[class*="container"]:has(input[type="checkbox"]) {
   background-color: var(--primary-500) !important;
 }
 
-div[class*="control-"] > div[class*="container-"]:has(input[checked]) {
+div[class*="control-"] > div[class*="container-"]:has(input[checked]), div[class*="container"] > div[class*="container"][class*="checked-"]{
   background-color: var(--accent) !important;
 }
-
 
 svg[class*="slider"] > svg > path {
   fill: var(--accent) !important;
 }
+
+
 
 [class*="circleIconButton-"] > [class*="circleIcon-"] > path {
   fill: var(--accent) !important;
@@ -76,4 +106,9 @@ div[class*="expandedFolderIconWrapper-"] > svg {
 
 div[class*="closedFolderIconWrapper-"] {
   background-color: var(--accent) !important;
+}
+
+
+button, div[class*="channelTextArea"], span[class*="botTag"], div[class*="popout"], [class*="item"]:not([class*="tabBarItem"]), [class*="container"] {
+  border-radius: var(--radius) !important;
 }
